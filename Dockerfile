@@ -26,5 +26,5 @@ WORKDIR /
 # Copy over binaries from the build-env
 COPY --from=build-env /go/src/github.com/LambdaIM/lambdavm/build/lambdavm /usr/bin/lambdavm
 
-# Run ethermintd by default
-CMD ["ethermintd"]
+# Run lambdavm by default
+CMD ["lambdavm"]
