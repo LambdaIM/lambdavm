@@ -18,8 +18,8 @@ const (
 
 // prefix bytes for the feemarket persistent store
 const (
-	prefixBlockGasWanted    = iota + 1
-	deprecatedPrefixBaseFee 
+	prefixBlockGasWanted = iota + 1
+	deprecatedPrefixBaseFee
 )
 
 const (
