@@ -5,7 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"math/big"
 	"net"
 	"net/http"
@@ -95,9 +95,9 @@ func (s *websocketsServer) Start() {
 	go func() {
 		var err error
 		if s.certFile == "" || s.keyFile == "" {
-			err = http.ListenAndServe(s.wsAddr, ws)
+			err = http.ListenAndServe(s.wsAddr, ws) //nolint:gosec // TODO: enable timeouts using some other method
 		} else {
-			err = http.ListenAndServeTLS(s.wsAddr, s.certFile, s.keyFile, ws)
+			err = http.ListenAndServeTLS(s.wsAddr, s.certFile, s.keyFile, ws) //nolint:gosec // TODO: enable timeouts using some other method
 		}
 
 		if err != nil {
@@ -301,7 +301,7 @@ func (s *websocketsServer) tcpGetAndSendResponse(wsConn *wsConn, mb []byte) erro
 
 	defer resp.Body.Close()
 
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return errors.Wrap(err, "could not read body from response")
 	}
