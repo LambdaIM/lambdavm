@@ -21,7 +21,7 @@ require (
 	github.com/onsi/ginkgo/v2 v2.5.0
 	github.com/onsi/gomega v1.24.1
 	github.com/pkg/errors v0.9.1
-	github.com/rakyll/statik v0.1.7
+	github.com/rakyll/statik v0.1.8
 	github.com/regen-network/cosmos-proto v0.3.1
 	github.com/rs/cors v1.8.2
 	github.com/spf13/cast v1.5.0
