@@ -1,6 +1,6 @@
 module github.com/LambdaIM/lambdavm
 
-go 1.18
+go 1.26
 
 require (
 	github.com/armon/go-metrics v0.4.0
@@ -35,7 +35,7 @@ require (
 	golang.org/x/text v0.4.0
 	google.golang.org/genproto v0.0.0-20221014213838-99cd37c6964a
 	google.golang.org/grpc v1.50.1
-	google.golang.org/protobuf v1.28.2-0.20220831092852-f930b1dc76e8
+	google.golang.org/protobuf v1.37.0-rc.1
 	gopkg.in/yaml.v2 v2.4.0
 )
 
@@ -88,7 +88,7 @@ require (
 	github.com/gogo/gateway v1.1.0 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/btree v1.0.0 // indirect
-	github.com/google/go-cmp v0.5.9 // indirect
+	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/google/orderedcode v0.0.1 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/gorilla/handlers v1.5.1 // indirect
